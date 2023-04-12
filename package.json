@@ -4,8 +4,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test": "npx playwright test",
-    "export": "next export"
+    "test": "npx playwright test"
   },
   "dependencies": {
     "csv-parser": "^3.0.0",
