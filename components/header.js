@@ -29,17 +29,17 @@ const Header = () => {
       <nav>
         <ul className={styles.navList}>
           <li className={styles.navItem}>
-            <Link href="/">
+            <Link href="/" legacyBehavior>
               <a>Home</a>
             </Link>
           </li>
           <li className={styles.navItem}>
-            <Link href="/about">
+            <Link href="/about" legacyBehavior>
               <a>About</a>
             </Link>
           </li>
           <li className={styles.navItem}>
-            <Link href="/contact">
+            <Link href="/contact" legacyBehavior>
               <a>Contact</a>
             </Link>
           </li>
