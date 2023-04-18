@@ -1,7 +1,7 @@
 // Import required dependencies and components
 import React from 'react';
 import Link from 'next/link';
-import styles from './Footer.module.css';
+import styles from './footer.module.css';
 
 // Define the Footer component
 const Footer = () => {
