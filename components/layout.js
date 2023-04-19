@@ -11,7 +11,7 @@ import Footer from './footer';
 const name = '[WWC]';
 export const siteTitle = 'MyWebClass.org';
 
-export default function Layout({ children, home }) {
+export default function Layout({ children}) {
   return (
     <>
       <Script
@@ -24,11 +24,6 @@ export default function Layout({ children, home }) {
       <Header />
       <div className={styles.container}>
       <main>{children}</main>
-      {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">← Back to home</Link>
-        </div>
-      )}
       </div>
       <Footer />
     </>
