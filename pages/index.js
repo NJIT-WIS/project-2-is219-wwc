@@ -5,6 +5,7 @@ import { getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
 import Date from "../components/date";
 import Hero from "../components/hero";
+import Card from '../components/card';
 import CookieConsentBanner from "../components/cookieConsentBanner";
 
 export default function Home({ allPostsData }) {
@@ -15,6 +16,13 @@ export default function Home({ allPostsData }) {
       </Head>
       <Hero />
       <CookieConsentBanner />
+      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
+        <Card
+          title="Example Card"
+          description="This is an example card component in a Next.js application."
+          image="/images/example.png"
+        />
+      </div>
       </>
   );
 }
