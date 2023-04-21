@@ -9,6 +9,7 @@ import Card from '../components/card';
 import CookieConsentBanner from "../components/cookieConsentBanner";
 import Modal from '../components/modal';
 import { useState } from 'react';
+import CallToAction from '../components/cta';
 
 
 export default function Home({ allPostsData }) {
@@ -40,6 +41,12 @@ export default function Home({ allPostsData }) {
         <p>This is a basic modal component in a Next.js application.</p>
         <button onClick={closeModal}>Close Modal</button>
       </Modal>
+      <CallToAction
+      text="Join us in revolutionizing education! Become a volunteer today."
+      onClick={() => {
+        // Handle the sign-up action, e.g., navigate to the sign-up page.
+      }}
+    />
     </>
   );
 }
