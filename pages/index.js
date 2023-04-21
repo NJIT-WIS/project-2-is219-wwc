@@ -7,8 +7,20 @@ import Date from "../components/date";
 import Hero from "../components/hero";
 import Card from '../components/card';
 import CookieConsentBanner from "../components/cookieConsentBanner";
+import Modal from '../components/modal';
+import { useState } from 'react';
+
 
 export default function Home({ allPostsData }) {
+  const [showModal, setShowModal] = useState(true);
+
+  const openModal = () => {
+    setShowModal(true);
+  };
+  
+  const closeModal = () => {
+    setShowModal(false);
+  };
   return (
     <>
       <Head>
@@ -23,7 +35,12 @@ export default function Home({ allPostsData }) {
           image="/images/example.png"
         />
       </div>
-      </>
+      <Modal show={showModal} onClose={closeModal}>
+        <h2>Example Modal</h2>
+        <p>This is a basic modal component in a Next.js application.</p>
+        <button onClick={closeModal}>Close Modal</button>
+      </Modal>
+    </>
   );
 }
 
