@@ -1,13 +1,11 @@
 import Image from 'next/image';
 import Script from 'next/script';
-
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
-
 import Header from './header';
 import Footer from './footer';
-
+import MetaTags from './metatags';
 const name = '[WWC]';
 export const siteTitle = 'MyWebClass.org';
 
