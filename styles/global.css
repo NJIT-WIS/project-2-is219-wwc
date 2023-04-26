@@ -25,3 +25,11 @@ img {
   max-width: 100%;
   display: block;
 }
+
+.force-bg-white {
+  background-color: white !important;
+}
+
+.force-text-black {
+  color: black !important;
+}
