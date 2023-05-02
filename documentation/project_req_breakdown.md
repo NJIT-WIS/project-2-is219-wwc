@@ -2,7 +2,7 @@
 
 ### Design and Static React Components:
 
- [ ]Create a design system with a color palette, typography, and reusable components such as buttons, input fields, and cards.
+ - [ ]Create a design system with a color palette, typography, and reusable components such as buttons, input fields, and cards.
  - [ ]Build static React components using Next.js for layout, header, footer, and other sections of the site.
 
 ### SEO, Accessibility, and Responsiveness for Mobile:
