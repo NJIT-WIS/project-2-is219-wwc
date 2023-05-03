@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import config from "../../sanity.config";
+import config from "../../../sanity.config";
 import Head from "next/head";
 import { NextStudio } from "next-sanity/studio";
 

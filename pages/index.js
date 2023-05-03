@@ -1,16 +1,14 @@
 import Head from "next/head";
-import Layout, { siteTitle } from '../components/layout'
+import Layout, { siteTitle } from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
 import { getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
 import Date from "../components/date";
 import Hero from "../components/hero";
-import Card from '../components/card';
 import CookieConsentBanner from "../components/cookieConsentBanner";
-import Modal from '../components/modal';
-import { useState } from 'react';
-import CallToAction from '../components/cta';
-
+import Modal from "../components/modal";
+import { useState } from "react";
+import CallToAction from "../components/cta";
 
 export default function Home({ allPostsData }) {
   const [showModal, setShowModal] = useState(true);
@@ -18,7 +16,7 @@ export default function Home({ allPostsData }) {
   const openModal = () => {
     setShowModal(true);
   };
-  
+
   const closeModal = () => {
     setShowModal(false);
   };
@@ -28,7 +26,7 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <CookieConsentBanner />
-      <Card
+      <Hero
         title="Example Card"
         description="This is an example card component in a Next.js application."
         image="/images/example.png"
