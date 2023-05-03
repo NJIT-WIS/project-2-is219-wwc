@@ -14,6 +14,7 @@ const query = groq`
     categories[]->
 } | order(_createdAt desc)
 `;
+export const revalidate = 60; //revalitating the page every 60 seconds
 
 export default function Blog({ allPostsData, preview }) {
   if (preview) {
