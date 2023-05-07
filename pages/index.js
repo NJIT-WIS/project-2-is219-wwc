@@ -1,6 +1,5 @@
 import Head from "next/head";
-import Layout, { siteTitle } from "../components/layout";
-import utilStyles from "../styles/utils.module.css";
+import { siteTitle } from "../components/layout";
 import { getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
 import Date from "../components/date";
@@ -47,11 +46,16 @@ export default function Home({ allPostsData }) {
   );
 
   const modalContent = (
-    <p className="mb-4">
-      We use cookies to ensure that we give you the best experience on our
-      website. If you continue to use this site, we will assume that you are
-      happy with it.
-    </p>
+    <div>
+      <p className="mb-4">
+        We use cookies to ensure that we give you the best experience on our
+        website. If you continue to use this site, we will assume that you are
+        happy with it.
+      </p>
+      <a href="privacy-policy/" className="text-blue-500 font-bold">
+        Read More
+      </a>
+    </div>
   );
 
   return (
