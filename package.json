@@ -17,6 +17,7 @@
     "fs": "0.0.1-security",
     "glob": "^9.3.2",
     "gray-matter": "^4.0.3",
+    "js-cookie": "^3.0.5",
     "next": "latest",
     "next-sanity": "^4.2.0",
     "react": "18.2.0",
