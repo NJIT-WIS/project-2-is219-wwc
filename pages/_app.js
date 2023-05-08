@@ -4,7 +4,6 @@ import '../styles/tailwind.css';
 
 // Function to send error event to Google Analytics
 function trackError(error) {
-  ```Tracks and reports uncaught errors and unhandled promise rejections, which are common sources of client-side issues```
   if (window.gtag) {
     window.gtag('event', 'exception', {
       description: error.message,
