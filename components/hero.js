@@ -1,5 +1,6 @@
 // components/Hero.js
 import React from 'react';
+import Link from 'next/link';
 
 const Hero = ({ title, description, image }) => {
   return (
@@ -9,9 +10,9 @@ const Hero = ({ title, description, image }) => {
           <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">{title}</h1>
           <p className="mb-8 leading-relaxed">{description}</p>
           <div className="flex justify-center">
-            <a href="/">
+            <Link href="/SignUpForm">
               <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Start Here</button>
-            </a>
+            </Link>
           </div>
         </div>
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
