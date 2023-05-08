@@ -5,10 +5,10 @@ import { getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
 import Date from "../components/date";
 import Hero from "../components/hero";
-import Card from '../components/card';
 import CookieConsentBanner from "../components/cookieConsentBanner";
 import Modal from '../components/modal';
 import { useState } from 'react';
+import MetaTags from "../components/metatags";
 import CallToAction from '../components/cta';
 
 
@@ -28,10 +28,11 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <CookieConsentBanner />
-      <Card
-        title="Example Card"
-        description="This is an example card component in a Next.js application."
-        image="/images/example.png"
+      <Hero
+        title="Innovate and Transform Education"
+        description="Unleash the potential of Agile and Lean methodologies in your classroom. Join MyWebClass to explore groundbreaking 
+        strategies that revolutionize teaching and empower students for the AI-driven world."
+        image="/images/hero_image.png"
       />
       <Modal show={showModal} onClose={closeModal}>
         <h2>Example Modal</h2>
