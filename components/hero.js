@@ -9,11 +9,22 @@ const Hero = ({ title, description, image }) => {
           <h1 className="text-4xl font-semibold mb-4">{title}</h1>
           <p className="text-lg mb-4">{description}</p>
           <div className="mb-4 md:mb-0">
-            <button type="button" className="bg-green-500 text-white font-bold py-2 px-4 rounded-lg">Start Here</button>
+            <a href="/">
+              <button
+                type="button"
+                className="bg-green-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-opacity-50"
+              >
+                Start Here
+              </button>
+            </a>
           </div>
         </div>
         <div className="md:w-4/12 md:ml-8 p-0 overflow-hidden shadow-lg">
-          <img className="rounded-lg w-full object-cover" src={image} alt={title} />
+          <img
+            className="rounded-lg w-full object-cover"
+            src={image}
+            alt={title}
+          />
         </div>
       </div>
     </div>
