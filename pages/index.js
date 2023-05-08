@@ -1,40 +1,89 @@
 import Head from "next/head";
-import Layout, { siteTitle } from "../components/layout";
-import utilStyles from "../styles/utils.module.css";
+import { siteTitle } from "../components/layout";
 import { getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
 import Date from "../components/date";
-import CookieConsentBanner from "../components/cookieConsentBanner";
+import Hero from "../components/hero";
+import MetaTags from "../components/metatags";
+import Modal from "../components/modal";
+import { useState, useEffect } from "react";
+import CallToAction from "../components/cta";
+import Cookies from "js-cookie";
 
 export default function Home({ allPostsData }) {
+  const [showModal, setShowModal] = useState(false);
+
+  useEffect(() => {
+    if (!Cookies.get("cookieConsent")) {
+      setShowModal(true);
+    }
+  }, []);
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
+  const actions = (
+    <>
+      <button
+        className="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded mr-2"
+        onClick={() => {
+          closeModal();
+          Cookies.remove("cookieConsent");
+        }}
+      >
+        I Decline
+      </button>
+      <button
+        className="bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded"
+        onClick={() => {
+          closeModal();
+          Cookies.set("cookieConsent", "true", { expires: 365 });
+        }}
+      >
+        I Agree
+      </button>
+    </>
+  );
+
+  const modalContent = (
+    <div>
+      <p className="mb-4">
+        Please read our Privacy Policy carefully before using our website. Do
+        you agree to our Privacy Policy?
+      </p>
+      <a href="privacy-policy/" className="text-sky-500 font-bold">
+        Read More
+      </a>
+    </div>
+  );
+
   return (
-    <Layout home>
+    <>
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
-        <p>[Your Self Introduction]</p>
-        <p>
-          (This is a sample website - you’ll be building a site like this in{" "}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
-        </p>
-      </section>
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
-        <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
-              <Link href={`/posts/${id}`}>{title}</Link>
-              <br />
-              <small className={utilStyles.lightText}>
-                <Date dateString={date} />
-              </small>
-            </li>
-          ))}
-        </ul>
-      </section>
-      <CookieConsentBanner />
-    </Layout>
+      <MetaTags
+        title="MyWebClass | Innovate Education"
+        description="Unleash the potential of Agile and Lean methodologies in your classroom. Join MyWebClass to explore groundbreaking strategies that revolutionize teaching and empower students for the AI-driven world."
+        imageURL="https://github.com/NJIT-WIS/project-2-is219-wwc/images/hero_image.png"
+        imageAlt="hero_image"
+        url="https://github.com/NJIT-WIS/project-2-is219-wwc/images/hero_image.png"
+      />
+      <Hero
+        title="Innovate and Transform Education"
+        description="Unleash the potential of Agile and Lean methodologies in your classroom. Join MyWebClass to explore groundbreaking 
+        strategies that revolutionize teaching and empower students for the AI-driven world."
+        image="/images/hero_image.png"
+      />
+      <Modal
+        show={showModal}
+        onClose={closeModal}
+        title="Cookie Consent"
+        content={modalContent}
+        actions={actions}
+      />
+    </>
   );
 }
 

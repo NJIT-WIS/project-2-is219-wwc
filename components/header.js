@@ -14,7 +14,7 @@ const Header = () => {
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
-          name="description"
+          name="MyWebClass"
           content="Learn how to build a personal website using Next.js"
         />
         <meta
