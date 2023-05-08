@@ -5,7 +5,7 @@ import urlFor from "../../../lib/urlFor";
 import { PortableText } from "@portabletext/react";
 import { RichTextComponents } from "../../../components/RichTextComponents";
 
-export const revalidate = 60; //revalitating the page every 60 seconds
+export const revalidate = 60; // revalidating the page every 60 seconds
 
 export async function generateStaticParams() {
   const query = groq`
@@ -23,60 +23,54 @@ export async function generateStaticParams() {
 
 function Post({ post }) {
   return (
-    <article className="px-10 pb-28">
-      <section className="space-y-2 border-[#3b82f6] text-white">
-        <div className="relative min-h-56 flex flex-col md:flex-row justify-between">
-          <div className="absolute top0 w-4 h-4 opacity-10 blur-sm p-10">
-            <Image
-              className="object-cover object-left lg:object-center"
-              src={urlFor(post.mainImage).url()}
-              alt={post.author ? post.author.name : "Unknown"}
-              fill
-            />
-          </div>
-          <section className="p-5 bg-black w-full">
-            <div className="flex flex-col md:flex-row justify-between gap-y-5">
-              <div>
-                <h1 className="text-4xl font-extrabold">{post.title}</h1>
-                <p>
-                  {new Date(post._createdAt).toLocaleDateString("en-US", {
-                    day: "numeric",
-                    month: "long",
-                    year: "numeric",
-                  })}
-                </p>
-              </div>
-              <div className="flex items-center space-x-2">
-                {post.author && post.author.image && (
-                  <Image
-                    className="rounded-full"
-                    src={urlFor(post.author.image).url()}
-                    alt={post.author ? post.author.name : "By: Unknown"}
-                    height={40}
-                    width={40}
-                  />
-                )}
-                <div>
-                  <h3 className="text-lg font-bold">
-                    {post.author ? post.author.name : "By: Unknown"}
-                  </h3>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div className="flex items-center justify-end mt-auto space-x-2">
-                {post.categories.map((category) => (
-                  <div className="bg-white text-center text-black px-3 py-1 rounded-full text-sm font-semibold">
-                    <p>{category.title}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
+    <main className="mt-10">
+      <div className="mb-4 md:mb-0 w-full mx-auto relative">
+        <div className="px-4 lg:px-0">
+          <h2 className="text-4xl font-semibold text-gray-800 leading-tight">
+            {post.title}
+          </h2>
+          {post.categories.map((category) => (
+            <a
+              key={category._id}
+              className="py-2 text-indigo-600 inline-flex items-center justify-center mb-2"
+            >
+              {category.title}
+            </a>
+          ))}
         </div>
-      </section>
-      <PortableText value={post.body} components={RichTextComponents} />
-    </article>
+        <div className="relative w-full h-80 lg:rounded font-bold">
+          <Image
+            src={urlFor(post.mainImage).url()}
+            alt={post.author ? post.author.name : "Unknown"}
+            layout="fill"
+            objectFit="cover"
+            className="lg:rounded"
+          />
+        </div>
+        <div className="flex py-2">
+          {post.author && post.author.image && (
+            <Image
+              className="h-10 w-10 rounded-full mr-2 object-cover"
+              src={urlFor(post.author.image).url()}
+              alt={post.author ? post.author.name : "By: Unknown"}
+              height={40}
+              width={40}
+            />
+          )}
+          <div>
+            <p className="font-semibold text-gray-700 text-sm">
+              {post.author ? post.author.name : "By: Unknown"}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex flex-col lg:flex-row lg:space-x-12">
+        <div className="px-4 lg:px-0 mt-12 text-gray-700 text-lg leading-relaxed w-full lg:w-3/4">
+          <PortableText value={post.body} components={RichTextComponents} />
+        </div>
+      </div>
+    </main>
   );
 }
 
