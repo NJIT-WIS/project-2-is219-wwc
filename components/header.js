@@ -1,8 +1,8 @@
 // Import required dependencies and components
-import React from "react";
-import Link from "next/link";
-import Head from "next/head";
-import styles from "./header.module.css";
+import React from 'react';
+import Link from 'next/link';
+import Head from 'next/head';
+import styles from './header.module.css';
 
 // Define the siteTitle constant
 const siteTitle = "Your Site Title";
