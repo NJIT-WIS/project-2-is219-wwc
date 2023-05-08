@@ -1,0 +1,24 @@
+.header {
+    background-color: #65bad6;
+    padding: 1rem 2rem;
+  }
+  
+  .navList {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navItem {
+    margin-right: 1rem;
+  }
+  
+  .navItem a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .navItem a:hover {
+    text-decoration: underline;
+  }
