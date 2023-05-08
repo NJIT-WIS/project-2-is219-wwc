@@ -17,6 +17,7 @@
     "fs": "0.0.1-security",
     "glob": "^9.3.2",
     "gray-matter": "^4.0.3",
+    "isomorphic-unfetch": "^4.0.2",
     "js-cookie": "^3.0.5",
     "next": "latest",
     "next-sanity": "^4.3.2",
