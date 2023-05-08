@@ -9,16 +9,16 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.footerColumns}>
         <div className={styles.footerColumn}>
-          <h4>About</h4>
+          <h4>About MyWebClass.org</h4>
           <ul>
             <li>
-              <Link href="/about">
+              <Link href="../AboutPage">
                 <a>About Us</a>
               </Link>
             </li>
             <li>
-              <Link href="/mission">
-                <a>Our Mission</a>
+              <Link href="/privacy-policy">
+                <a>Privacy Policy</a>
               </Link>
             </li>
           </ul>
