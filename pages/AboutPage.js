@@ -12,59 +12,37 @@ const AboutPage = () => {
         <title>About Us | MyWebClass.org</title>
         <meta name="description" content="Learn more about MyWebClass.org and our mission to revolutionize education for the AI-driven world." />
       </Head>
-
-      <main className={styles.main}>
-      <h1 className={styles.title}>Welcome to MyWebClass.org - Pioneering the Future of Education
-      </h1>
-        <section className={styles.section}>
-        <p>
-        Dear friends, colleagues, and fellow educators, we invite you to join us on an essential journey – the transformation of education for the AI-driven world. As we navigate the challenges and opportunities of the Fourth Industrial Revolution, it is crucial to reimagine our educational practices and adopt a new paradigm that empowers our students with the knowledge and skills they need to flourish in an increasingly complex and interconnected world.
-        </p>
-        
-        <p>
-        The existing factory school model, a legacy of the Industrial Revolution, is no longer adequate for preparing students for the demands and opportunities presented by AI and other emerging technologies. According to the World Economic Forum, 65% of children entering primary school today will work in jobs that don't exist yet. We must shift our focus towards nurturing creativity, adaptability, and collaboration – essential skills for success in the AI-driven world.
-        </p>
-        
-        <p>
-        We have a diverse team of professionals with expertise in various fields, including web development, design, and marketing.
-        </p>
-       
-        <p>
-        MyWebClass.org, a foundation committed to revolutionizing education by incorporating Agile and Lean principles into the classroom, is at the forefront of this transformation. Our mission encompasses conducting research on effective strategies, developing resources and tools, offering professional development opportunities, and collaborating with schools and educators to foster a culture of continuous improvement, collaboration, and adaptability.
-        </p>
-        
-        <p>
-        A study by the American Institutes for Research (2012) found that schools adopting project-based learning approaches saw significant gains in student achievement. 
-        </p>
-        
-        <p>
-        Similarly, a case study published in the Journal of Applied Instructional Design (2015) demonstrated that the integration of Agile principles in a K-12 setting led to increased student engagement, improved collaboration, and enhanced problem-solving skills. These examples attest to the power of incorporating Agile and Lean principles into educational approaches. 
-        </p>
-        
-        <p>
-        MyWebClass.org, a foundation committed to revolutionizing education by incorporating Agile and Lean principles into the classroom, is at the forefront of this transformation. Our mission encompasses conducting research on effective strategies, developing resources and tools, offering professional development opportunities, and collaborating with schools and educators to foster a culture of continuous improvement, collaboration, and adaptability.
-        </p>
-
-        <p>
-        To fully grasp the need for this paradigm shift, it is vital to examine the historical and cultural context that has shaped our current educational system. As societal expectations change and the skills required for success evolve, we must embrace a new educational paradigm.
-        </p>
-
-        <p>
-        In conclusion, embracing change in education and transcending the factory school model is essential for preparing students for the challenges and opportunities of the AI-driven world. Organizations like MyWebClass.org play a crucial role in driving this paradigm shift by incorporating Agile and Lean principles into the classroom. By working together, we can create an environment where students are better prepared for the future.   
-        </p>
-        </section>
-        
-        <section className={styles.section}>
-          <h3>References</h3>
-            <ul>
-                <li>
-                 American Institutes for Research (2012). Study of Deeper Learning: Opportunities and Outcomes. Retrieved from <a href="https://www.air.org/resource/study-deeper-learning-opportunities-and-outcomes-2012" target="_blank" rel="noopener noreferrer">https://www.air.org/resource/study-deeper-learning-opportunities-and-outcomes-2012</a>
-                </li>
-                <li>
-                Young, M. R., & Rasor, S. L. (2015). Implementing Agile Methods in K-12 Education. Journal of Applied Instructional Design, 5(1). Retrieved from <a href="https://edtechbooks.org/jaid_5_1/implementing_agile_methods_in_k_12_education" target="_blank" rel="noopener noreferrer">https://edtechbooks.org/jaid_5_1/implementing_agile_methods_in_k_12_education</a>
-                </li>
-            </ul>
-        </section>
+      <main>
+      <section class="text-gray-600 body-font">
+      <div class="container px-4 py-16 mx-auto flex flex-wrap">
+        <div class="lg:w-1/3 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
+          <img alt="feature" class="object-cover object-center h-full w-full" src="/images/logo.png"/>
+        </div>
+        <div class="flex flex-col flex-wrap lg:py-4 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center">
+          <div class="flex flex-col mb-10 lg:items-start items-center">
+            <div class="flex-grow">
+              <h2 class="text-gray-900 text-lg title-font font-medium mb-3">About Us</h2>
+              <p class="leading-relaxed text-sm">At MyWebClass.org, our vision is to foster a global transformation in education by embracing innovative approaches and emerging technologies. We envision a future where students are empowered with the necessary skills to excel in an AI-driven world, fostering creativity, adaptability, and collaboration.
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-col mb-10 lg:items-start items-center">
+            <div class="flex-grow">
+              <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Mission</h2>
+              <p class="leading-relaxed text-sm">Our mission at MyWebClass.org is to revolutionize education by integrating Agile and Lean principles into classrooms worldwide. We focus on conducting research, developing cutting-edge resources and tools, and collaborating with schools and educators to cultivate a culture of continuous improvement and adaptability.
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-col mb-10 lg:items-start items-center">
+            <div class="flex-grow">
+              <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Vision</h2>
+              <p class="leading-relaxed text-sm">MyWebClass.org strives to make a lasting impact by driving the paradigm shift needed for a more effective educational system. By providing resources, tools, and professional development opportunities, we are building a network of dedicated professionals committed to preparing students for success in the rapidly evolving, AI-driven world.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
       </main>
     </>
   );
