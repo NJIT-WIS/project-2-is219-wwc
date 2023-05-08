@@ -2,7 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
-import styles from './header.module.css';
+import styles from './MainNavigationBar.module.css';
 
 // Define the siteTitle constant
 const siteTitle = "Your Site Title";
