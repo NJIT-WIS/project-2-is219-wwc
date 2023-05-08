@@ -28,16 +28,29 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <CookieConsentBanner />
-      <Card
-        title="Example Card"
-        description="This is an example card component in a Next.js application."
-        image="/images/example.png"
-      />
+      <div>
+        <Link href="/posts/sample-blog-post">
+          <a>Read the Sample Blog Post</a>
+        </Link>
+      </div>
+      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
+        <Card
+          title="Example Card"
+          description="This is an example card component in a Next.js application."
+          image="/images/example.png"
+        />
+      </div>
       <Modal show={showModal} onClose={closeModal}>
         <h2>Example Modal</h2>
         <p>This is a basic modal component in a Next.js application.</p>
         <button onClick={closeModal}>Close Modal</button>
       </Modal>
+      <CallToAction
+      text="Join us in revolutionizing education! Become a volunteer today."
+      onClick={() => {
+        // Handle the sign-up action, e.g., navigate to the sign-up page.
+      }}
+    />
     </>
   );
 }

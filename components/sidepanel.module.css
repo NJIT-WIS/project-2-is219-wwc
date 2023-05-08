@@ -1,0 +1,43 @@
+/* components/sidepanel.module.css */
+.toc {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #f5f5f5;
+  padding: 1rem;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.tocList {
+  list-style: none;
+  padding-left: 0;
+}
+
+.tocSublist {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+.tocItem {
+  margin-bottom: 0.5rem;
+}
+
+.tocItem:before {
+  color: #999;
+}
+
+.tocLink {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.tocLink:hover {
+  color: #555;
+}
+
+.tocSublist .tocLink:hover {
+  color: #666;
+}
