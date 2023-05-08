@@ -5,8 +5,6 @@ title: ''
 labels: question
 assignees: ah593, Lizzyolu, dm594
 
----
-
 ## What is your question?
 A clear and concise description of your question.
 
