@@ -3,49 +3,50 @@ import Image from "next/image";
 import ClientSideRoute from "./ClientSideRoute";
 function BlogList({ posts }) {
   return (
-    <div>
-      <hr className="border-[#2563eb] mb-10" />
-      <div className="grid grid-cols-1 md:grid-cols-2 px-10 gap-10 gap-y-16 pd-24">
-        {/* Posts */}
+    <div className="container px-4 py-16 mx-auto">
+      <div className="flex flex-wrap -m-2">
         {posts.map((post) => (
-          <ClientSideRoute key={post._id} route={`/post/${post.slug.current}`}>
-            <div className="flex-flex-col group cursor-pointer">
-              <div className="relative w-full h-80 drop-shasow-xl group-hover:scale-105 transition-transform duration-200 ease-out">
-                <Image
-                  className="object-cover object-left lg:object-center"
-                  src={urlFor(post.mainImage).url()}
-                  alt={post.author ? post.author.name : "Unknown"}
-                  fill
-                />
-                <div className="absolute bottom-0 w-full bg-opacity-20 bg-black backdrop-blur-lg rounded drop-shadow-lg text-stone-50 p-5 flex justify-between">
-                  <div>
-                    <p className="font-bold">{post.title}</p>
-                    <p>
-                      {new Date(post._createdAt).toLocaleDateString("en-US", {
-                        day: "numeric",
-                        month: "long",
-                        year: "numeric",
-                      })}
-                    </p>
-                  </div>
-                  <div className="flex flex-col md:flex-row gap-y-2 md:gap-x-2 items-center">
-                    {post.categories.map((category) => (
-                      <div className="bg-white text-center text-black px-3 py-1 rounded-full text-sm font-semibold">
-                        <p>{category.title}</p>
-                      </div>
-                    ))}
-                  </div>
+          <div key={post._id} className="p-2 md:w-1/3">
+            <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+              <Image
+                className="lg:h-32 md:h-24 w-full object-cover object-center"
+                src={urlFor(post.mainImage).url()}
+                alt={post.author ? post.author.name : "Unknown"}
+                layout="responsive"
+                width="720"
+                height="360"
+              />
+              <div className="p-4">
+                <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                  {post.categories.map((category) => category.title).join(", ")}
+                </h2>
+                <h1 className="title-font text-md font-medium text-gray-900 mb-2">
+                  {post.title}
+                </h1>
+                <p className="leading-relaxed mb-2 text-sm">{post.description}</p>
+                <div className="flex items-center flex-wrap">
+                  <ClientSideRoute route={`/post/${post.slug.current}`}>
+                    <a className="text-indigo-500 inline-flex items-center md:mb-1 lg:mb-0 text-sm">
+                      Learn More
+                      <svg
+                        className="w-3 h-3 ml-1"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        fill="none"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path d="M5 12h14"></path>
+                        <path d="M12 5l7 7-7 7"></path>
+                      </svg>
+                    </a>
+                  </ClientSideRoute>
+                  {/* Additional elements, such as view count or comment count, can be added here */}
                 </div>
               </div>
-              <div className="met-5 flex-1">
-                <p className="underline text-lg font-bold">{post.title}</p>
-                <p className="line-clamp-2 text-gray-500">{post.description}</p>
-              </div>
-              <p className="mt-5 font-bold flex items-center group-hover:underline">
-                Read Post
-              </p>
             </div>
-          </ClientSideRoute>
+          </div>
         ))}
       </div>
     </div>

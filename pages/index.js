@@ -64,7 +64,6 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <CookieConsentBanner />
       <Hero
         title="Innovate and Transform Education"
         description="Unleash the potential of Agile and Lean methodologies in your classroom. Join MyWebClass to explore groundbreaking 
