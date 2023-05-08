@@ -1,6 +1,6 @@
 // components/Hero.js
 import React from 'react';
-
+//update
 const Hero = ({ title, description, image }) => {
   return (
     <section className="text-gray-600 body-font">
