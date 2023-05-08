@@ -64,6 +64,13 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
+      <MetaTags
+        title="MyWebClass | Innovate Education"
+        description="Unleash the potential of Agile and Lean methodologies in your classroom. Join MyWebClass to explore groundbreaking strategies that revolutionize teaching and empower students for the AI-driven world."
+        imageURL="https://github.com/NJIT-WIS/project-2-is219-wwc/images/hero_image.png"
+        imageAlt="hero_image"
+        url="https://github.com/NJIT-WIS/project-2-is219-wwc/images/hero_image.png"
+      />
       <Hero
         title="Innovate and Transform Education"
         description="Unleash the potential of Agile and Lean methodologies in your classroom. Join MyWebClass to explore groundbreaking 
