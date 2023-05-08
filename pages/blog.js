@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Layout, { siteTitle } from "../components/layout";
-import CookieConsentBanner from "../components/cookieConsentBanner";
 import { client } from "../lib/sanity.client";
 import { groq } from "next-sanity";
 import { PreviewSuspense } from 'next-sanity/preview';
