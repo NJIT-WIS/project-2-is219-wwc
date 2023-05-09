@@ -1,13 +1,9 @@
 import Head from "next/head";
 import { siteTitle } from "../components/layout";
-import { getSortedPostsData } from "../lib/posts";
-import Link from "next/link";
-import Date from "../components/date";
 import Hero from "../components/hero";
 import MetaTags from "../components/metatags";
 import Modal from "../components/modal";
 import { useState, useEffect } from "react";
-import CallToAction from "../components/cta";
 import Cookies from "js-cookie";
 
 export default function Home({ allPostsData }) {
@@ -87,11 +83,3 @@ export default function Home({ allPostsData }) {
   );
 }
 
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
-  return {
-    props: {
-      allPostsData,
-    },
-  };
-}

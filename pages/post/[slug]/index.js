@@ -6,7 +6,6 @@ import { PortableText } from "@portabletext/react";
 import { RichTextComponents } from "../../../components/RichTextComponents";
 import MetaTags from "../../../components/metatags";
 
-export const revalidate = 60; // revalidating the page every 60 seconds
 
 export async function generateStaticParams() {
   const query = groq`
@@ -156,6 +155,7 @@ export async function getStaticProps({ params: { slug } }) {
     props: {
       post,
     },
+    revalidate: 60, // revalidating the page every 60 seconds
   };
 }
 
