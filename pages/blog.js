@@ -11,7 +11,7 @@ const query = groq`
     ...,
     author->,
     categories[]->
-} | order(_createdAt desc)
+} | order(_createdAt desc)[0...$limit]
 `;
 export const revalidate = 60; //revalitating the page every 60 seconds
 
@@ -36,11 +36,12 @@ export default function Blog({ allPostsData, preview }) {
 }
 
 export async function getStaticProps({ preview = false }) {
-  const allPostsData = await client.fetch(query);
+  const allPostsData = await client.fetch(query, { limit: 10 });
   return {
     props: {
       allPostsData,
       preview,
     },
+    revalidate: 60,
   };
 }
