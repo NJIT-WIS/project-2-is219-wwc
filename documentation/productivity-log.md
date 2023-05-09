@@ -1,0 +1,25 @@
+| User Story   || Issue Title   | Story Points | Issue Link            | Status   | Assigned To | Notes      |
+|---------------||---------------|--------------|-----------------------|----------|-------------|------------|
+| As a user, I want the website to have a visually appealing and modern design that aligns with the brand's values. | Example Issue | 8            | https://example.com/1 | Open     |   eoo2     | Needs work |
+| As a user, I want the website to be easy to navigate and understand. | Another Issue | 5            | https://example.com/2 | Closed   |   dm594     | Completed  |
+| As a user, I want the website to be accessible and functional on all devices, including mobile phones, tablets, and desktop computers. | Example Issue | 13            | https://example.com/1 | Open     |   dm594     | Needs work |
+| As a user, I want the website to be accessible to all users, including those with disabilities | Example Issue | 13            | https://example.com/1 | Open     |   dm594     | Needs work |
+| As a user, I want the website to follow best practices for accessibility and comply with 508 standards. | Another Issue | 5            | https://example.com/2 | Closed   |   dm594     | Completed  |
+| As a user, I want the website to respect my privacy and comply with GDPR regulations. | Example Issue | 8            | https://example.com/1 | Open     |   ah593     | Needs work |
+| As a user, I want the website to handle copyrighted materials responsibly and provide proper attribution. | Another Issue | 5            | https://example.com/2 | Closed   |   eoo2     | Completed  |
+| As a user, I want the website to guide me through each stage of the sales funnel, from awareness to conversion | Example Issue | 13            | https://example.com/1 | Open     |   eoo2     | Needs work |
+| As a user, I want the website to engage me and encourage me to take action, such as signing up for a newsletter or registering for a webinar.  | Another Issue | 8            | https://example.com/2 | Closed   |eoo2 dm594| Completed  |
+| As a user, I want to receive informative and relevant emails from MyWebClass.org. | Example Issue | 5            | https://example.com/1 | Open     |   dm594     | Needs work |
+| As a user, I want to easily subscribe and unsubscribe from the email list | Another Issue |  3            | https://example.com/2 | Closed   |   dm594     | Completed  |
+| As a user, I want to read informative and engaging blog posts on Agile and Lean principles in education. | Example Issue | 8            | https://example.com/1 | Open     |   eoo2     | Needs work |
+| As a user, I want to easily navigate through the blog section and find articles that interest me. | Another Issue | 5            | https://example.com/2 | Closed   |   ah593     | Completed  |
+| As a user, I want to share interesting articles with my network on social media platforms. | Example Issue | 3            | https://example.com/1 | Open     |   dm594     | Needs work |
+| As a user, I want to see share buttons for popular social media platforms on each blog post. | Another Issue | 3            | https://example.com/2 | Closed   |   ah593     | Completed  |
+| As a user, I want the website to be thoroughly tested, ensuring a seamless and bug-free experience. | Example Issue | 8            | https://example.com/1 | Open     |   ah593     | Needs work |
+| As a user, I want the website to continually improve its functionality and user experience based on test results. | Another Issue | 5            | https://example.com/2 | Closed   |   ah593     | Completed  |
+| As a user, I want the website to optimize its content and design based on data-driven insights. | Example Issue | 8            | https://example.com/1 | Open     |   ah593     | Needs work |
+| As a user, I want the website to continually test and refine its messaging and layout to provide the best user experience.  | Another Issue | 5            | https://example.com/2 | Closed   |   dm594     | Completed  |
+| As a user, I want the website to understand and improve the user journey from awareness to conversion. | Example Issue | 8            | https://example.com/1 | Open     |   ah593     | Needs work |
+| As a user, I want the website to provide a seamless and engaging experience that guides me through each stage of the sales funnel. | Another Issue | 5            | https://example.com/2 | Closed   |   ah593     | Completed  |
+| As a user, I want the website to use data-driven insights to optimize its performance and user experience. | Example Issue | 8            | https://example.com/1 | Open     |   ah593     | Needs work |
+| As a user, I want the website to continually analyze and improve its content, design, and functionality based on KPIs. | Another Issue | 5            | https://example.com/2 | Closed   |   ah593     | Completed  |
