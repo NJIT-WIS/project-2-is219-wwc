@@ -5,7 +5,7 @@ import React from 'react';
 const Reviews = () => {
   return (
     <section class="text-gray-600 body-font">
-      <div class="container px-5 py-5 mx-auto">
+      <div class="container px-5 pt-5 mx-auto">
         <div class="flex flex-wrap m-4">
           <div class="p-4 md:w-1/3">
             <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">

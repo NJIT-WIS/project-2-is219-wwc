@@ -58,6 +58,7 @@ export default function Home({ allPostsData }) {
     <>
       <Head>
         <title>{siteTitle}</title>
+        <script src="https://www.googleoptimize.com/optimize.js?id=OPT-K348SVP"></script>
       </Head>
       <MetaTags
         title="MyWebClass | Innovate Education"

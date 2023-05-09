@@ -1,86 +1,22 @@
 // Import required dependencies and components
 import React from 'react';
 import Link from 'next/link';
-import styles from './footer.module.css';
+import SocialMediaLinks from './SocialMediaLinks';
 
 // Define the Footer component
 const Footer = () => {
   return (
-    <footer className={styles.footer}>
-      <div className={styles.footerColumns}>
-        <div className={styles.footerColumn}>
-          <h4>About MyWebClass.org</h4>
-          <ul>
-            <li>
-              <Link href="../AboutPage">
-                <a>About Us</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/privacy-policy">
-                <a>Privacy Policy</a>
-              </Link>
-            </li>
-          </ul>
+    <footer className="bg-white">
+      <div className="max-w-screen-xl px-4 py-10 mx-auto space-y-5 overflow-hidden sm:px-6 lg:px-8">
+        <div className="flex justify-center">
+          <SocialMediaLinks>
+            </SocialMediaLinks>
         </div>
-        <div className={styles.footerColumn}>
-          <h4>Education & Research</h4>
-          <ul>
-            <li>
-              <Link href="/research">
-                <a>Research & Case Studies</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/agile-lean-principles">
-                <a>Agile & Lean Principles</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/resources">
-                <a>Resources & Tools</a>
-              </Link>
-            </li>
-          </ul>
+        <div className="mt-8 text-center">
+          <p className="text-base leading-6 text-gray-500">
+            &copy; {new Date().getFullYear()} Demi Matos <span class="middle-dot">·</span> Althesia Hylton <span class="middle-dot">·</span> Elizabeth Oluwasanmi
+          </p>
         </div>
-        <div className={styles.footerColumn}>
-          <h4>Professional Development</h4>
-          <ul>
-            <li>
-              <Link href="/professional-development">
-                <a>Professional Development</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/partnerships">
-                <a>Partnerships & Collaborations</a>
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div className={styles.footerColumn}>
-          <h4>Community & Support</h4>
-          <ul>
-            <li>
-              <Link href="/mental-health">
-                <a>Mental Health & Well-being</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/blog">
-                <a>Blog</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/contact">
-                <a>Contact Us</a>
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div className={styles.footerInfo}>
-        <p>&copy; {new Date().getFullYear()} MyWebClass.org. All rights reserved.</p>
       </div>
     </footer>
   );
