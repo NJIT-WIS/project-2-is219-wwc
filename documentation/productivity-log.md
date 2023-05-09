@@ -1,9 +1,9 @@
 | User Story   | Issue Title   | Story Points | Issue Link            | Status   | Assigned To | Notes      |
 |---------------|---------------|--------------|-----------------------|----------|-------------|------------|
-| As a user, I want the website to have a visually appealing and modern design that aligns with the brand's values. | Example Issue | 8            | https://example.com/1 | Open     |   eoo2     | Needs work |
-| As a user, I want the website to be easy to navigate and understand. | Another Issue | 5            | https://example.com/2 | Closed   |   dm594     | Completed  |
-| As a user, I want the website to be accessible and functional on all devices, including mobile phones, tablets, and desktop computers. | Example Issue | 13            | https://example.com/1 | Open     |   dm594     | Needs work |
-| As a user, I want the website to be accessible to all users, including those with disabilities | Example Issue | 13            | https://example.com/1 | Open     |   dm594     | Needs work |
+| As a user, I want the website to have a visually appealing and modern design that aligns with the brand's values. | Wireframe | 8            | https://github.com/NJIT-WIS/project-2-is219-wwc/issues/2 | Closed     |   eoo2     | Needs work |
+| As a user, I want the website to be easy to navigate and understand. | Reusable Components | 5 | https://github.com/NJIT-WIS/project-2-is219-wwc/issues/33 | Closed   |   dm594     | Completed  |
+| As a user, I want the website to be accessible and functional on all devices, including mobile phones, tablets, and desktop computers. | Next.js | 13            | https://github.com/NJIT-WIS/project-2-is219-wwc/issues/1 | Closed     |   dm594     |  |
+| As a user, I want the website to be accessible to all users, including those with disabilities | 508 Compliance | 13            | https://github.com/NJIT-WIS/project-2-is219-wwc/issues/8 | Closed     |   dm594     |  |
 | As a user, I want the website to follow best practices for accessibility and comply with 508 standards. | Another Issue | 5            | https://example.com/2 | Closed   |   dm594     | Completed  |
 | As a user, I want the website to respect my privacy and comply with GDPR regulations. | Example Issue | 8            | https://example.com/1 | Open     |   ah593     | Needs work |
 | As a user, I want the website to handle copyrighted materials responsibly and provide proper attribution. | Another Issue | 5            | https://example.com/2 | Closed   |   eoo2     | Completed  |
