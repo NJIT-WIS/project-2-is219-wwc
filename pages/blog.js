@@ -5,6 +5,7 @@ import { groq } from "next-sanity";
 import { PreviewSuspense } from "next-sanity/preview";
 import PreviewBlogList from "../components/PreviewBlogList";
 import BlogList from "../components/BlogList";
+import MetaTags from "../components/metatags";
 
 const query = groq`
 *[_type=='post'] {
