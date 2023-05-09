@@ -10,7 +10,7 @@ const Hero = ({ title, description, image }) => {
           <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">{title}</h1>
           <p className="mb-8 leading-relaxed">{description}</p>
           <div className="flex justify-center">
-            <Link href="/SignUpForm">
+            <Link href="/Volunteer">
               <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Start Here</button>
             </Link>
           </div>

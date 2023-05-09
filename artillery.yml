@@ -1,0 +1,25 @@
+config:
+  target: 'https://mywebclass.org'
+  phases:
+    - duration: 60
+      arrivalRate: 5
+scenarios:
+  - name: 'Sales Funnel Simulation'
+    flow:
+      - get:
+          url: '/'
+          # Test homepage, metadata, hero text, visuals, etc.
+      - get:
+          url: '/blog'
+          # Test blog posts
+      - get:
+          url: '/about'
+          # Test sales presentation and call-to-action
+      - post:
+          url: '/Volunteer'
+          json:
+            # Test MailChimp form submission
+            email: '{{ $randomEmail() }}'
+      - get:
+          url: '/share'
+         
