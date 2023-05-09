@@ -36,7 +36,7 @@ export default function Blog({ allPostsData, preview }) {
 }
 
 export async function getStaticProps({ preview = false }) {
-  const allPostsData = await client.fetch(query, { limit: 10 });
+  const allPostsData = await client.fetch(query, { limit: 5 });
   return {
     props: {
       allPostsData,
