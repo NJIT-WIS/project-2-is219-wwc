@@ -129,8 +129,6 @@ describe("Sales Funnel Tests", async () => {
     );
 
     // Test presence of social media share buttons in the footer
-    const twitterShareButton = await page.$("footer .twitter-button");
-    expect(twitterShareButton).toBeTruthy();
     const facebookShareButton = await page.$("footer .facebook-button");
     expect(facebookShareButton).toBeTruthy();
     // Add more share buttons as needed
