@@ -1,0 +1,41 @@
+/* components/card.module.css 
+.hero {
+    border: 1px solid #65bad6;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 300px;
+    transition: transform 0.2s;
+  }
+  
+  .hero:hover {
+    transform: translateY(-4px);
+  }
+  
+  .heroImage {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
+
+  .heroImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+
+  .heroContent {
+    padding: 1rem;
+  }
+  
+  .heroTitle {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+ 
+  .heroDescription {
+    color: #777;
+    font-size: 1rem;
+  }  */
