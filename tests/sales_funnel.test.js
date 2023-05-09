@@ -125,7 +125,7 @@ describe("Sales Funnel Tests", async () => {
   test("5. Loyalty: Social Media Sharing", async () => {
     // Navigate to the page containing the footer with social media sharing buttons
     await page.goto(
-      "https://project-2-is219-wwc.vercel.app/post/embracing-agile-lean-transforming-education-mywebclass"
+      "https://project-2-is219-wwc.vercel.app/post/Unlocking-Creativity-with-AI"
     );
 
     // Test presence of social media share buttons in the footer
