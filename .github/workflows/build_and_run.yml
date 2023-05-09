@@ -33,15 +33,3 @@ jobs:
       - name: Start production server
         run: npm run start &
         # or "yarn start &" if you're using yarn
-
-      # Deployment job
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
