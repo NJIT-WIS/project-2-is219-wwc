@@ -94,7 +94,7 @@ export default function NewsLetterSignUpForm() {
                       autoCorrect="off"
                     />
                     <button
-                      className="relative group inline-block flex-shrink-0 w-full sm:w-auto py-3 px-5 text-sm font-semibold text-orange-50 bg-blue-300 rounded-md overflow-hidden"
+                      className="relative group inline-block flex-shrink-0 w-full sm:w-auto py-3 px-5 text-sm font-semibold text-orange-50 bg-blue-500 rounded-md overflow-hidden"
                       type="submit"
                       onClick={subscribeUser}
                     >
