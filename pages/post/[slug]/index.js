@@ -4,6 +4,7 @@ import Image from "next/image";
 import urlFor from "../../../lib/urlFor";
 import { PortableText } from "@portabletext/react";
 import { RichTextComponents } from "../../../components/RichTextComponents";
+import MetaTags from "../../../components/metatags";
 
 export const revalidate = 60; // revalidating the page every 60 seconds
 
@@ -22,55 +23,69 @@ export async function generateStaticParams() {
 }
 
 function Post({ post }) {
+  const baseUrl = "https://njit-wis.github.io/project-2-is219-wwc/";
+  const postUrl = `${baseUrl}/post/${post.slug}`;
+  const postTitle = `${post.title} - MyWebClass`;
+  const postDescription = ""; // Replace with 'post.summary' field from form data
+  const postImageURL = urlFor(post.mainImage).url();
   return (
-    <main className="mt-10">
-      <div className="mb-4 md:mb-0 w-full mx-auto relative">
-        <div className="px-4 lg:px-0">
-          <h2 className="text-4xl font-semibold text-gray-800 leading-tight">
-            {post.title}
-          </h2>
-          {post.categories.map((category) => (
-            <a
-              key={category._id}
-              className="py-2 text-indigo-600 inline-flex items-center justify-center mb-2"
-            >
-              {category.title}
-            </a>
-          ))}
-        </div>
-        <div className="relative w-full h-80 lg:rounded font-bold">
-          <Image
-            src={urlFor(post.mainImage).url()}
-            alt={post.author ? post.author.name : "Unknown"}
-            layout="fill"
-            objectFit="cover"
-            className="lg:rounded"
-          />
-        </div>
-        <div className="flex py-2">
-          {post.author && post.author.image && (
+    <>
+      <MetaTags
+        title={postTitle}
+        description={postDescription}
+        imageURL={postImageURL}
+        imageAlt={post.author ? post.author.name : "Unknown"}
+        url={postUrl}
+      />
+      <main className="mt-10">
+        <div className="mb-4 md:mb-0 w-full mx-auto relative">
+          <div className="px-4 lg:px-0">
+            <h2 className="text-4xl font-semibold text-gray-800 leading-tight">
+              {post.title}
+            </h2>
+            {post.categories.map((category) => (
+              <a
+                key={category._id}
+                className="py-2 text-indigo-600 inline-flex items-center justify-center mb-2"
+              >
+                {category.title}
+              </a>
+            ))}
+          </div>
+          <div className="relative w-full h-80 lg:rounded font-bold">
             <Image
-              className="h-10 w-10 rounded-full mr-2 object-cover"
-              src={urlFor(post.author.image).url()}
-              alt={post.author ? post.author.name : "By: Unknown"}
-              height={40}
-              width={40}
+              src={urlFor(post.mainImage).url()}
+              alt={post.author ? post.author.name : "Unknown"}
+              layout="fill"
+              objectFit="cover"
+              className="lg:rounded"
             />
-          )}
-          <div>
-            <p className="font-semibold text-gray-700 text-sm">
-              {post.author ? post.author.name : "By: Unknown"}
-            </p>
+          </div>
+          <div className="flex py-2">
+            {post.author && post.author.image && (
+              <Image
+                className="h-10 w-10 rounded-full mr-2 object-cover"
+                src={urlFor(post.author.image).url()}
+                alt={post.author ? post.author.name : "By: Unknown"}
+                height={40}
+                width={40}
+              />
+            )}
+            <div>
+              <p className="font-semibold text-gray-700 text-sm">
+                {post.author ? post.author.name : "By: Unknown"}
+              </p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className="flex flex-col lg:flex-row lg:space-x-12">
-        <div className="px-4 lg:px-0 mt-12 text-gray-700 text-lg leading-relaxed w-full lg:w-3/4">
-          <PortableText value={post.body} components={RichTextComponents} />
+        <div className="flex flex-col lg:flex-row lg:space-x-12">
+          <div className="px-4 lg:px-0 mt-12 text-gray-700 text-lg leading-relaxed w-full lg:w-3/4">
+            <PortableText value={post.body} components={RichTextComponents} />
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
+    </>
   );
 }
 
@@ -80,7 +95,8 @@ export async function getStaticProps({ params: { slug } }) {
     {
     ...,
     author->,
-    categories[]->
+    categories[]->,
+    "slug": slug.current
     }
     `;
   const post = await client.fetch(query, { slug });
