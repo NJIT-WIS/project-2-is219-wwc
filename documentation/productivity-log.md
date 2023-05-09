@@ -1,5 +1,5 @@
-| User Story   || Issue Title   | Story Points | Issue Link            | Status   | Assigned To | Notes      |
-|---------------||---------------|--------------|-----------------------|----------|-------------|------------|
+| User Story   | Issue Title   | Story Points | Issue Link            | Status   | Assigned To | Notes      |
+|---------------|---------------|--------------|-----------------------|----------|-------------|------------|
 | As a user, I want the website to have a visually appealing and modern design that aligns with the brand's values. | Example Issue | 8            | https://example.com/1 | Open     |   eoo2     | Needs work |
 | As a user, I want the website to be easy to navigate and understand. | Another Issue | 5            | https://example.com/2 | Closed   |   dm594     | Completed  |
 | As a user, I want the website to be accessible and functional on all devices, including mobile phones, tablets, and desktop computers. | Example Issue | 13            | https://example.com/1 | Open     |   dm594     | Needs work |
