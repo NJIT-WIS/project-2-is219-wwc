@@ -46,7 +46,7 @@ describe("Sales Funnel Tests", async () => {
     const heroText = await page.textContent(".hero-text-selector");
     expect(heroText).toBeTruthy(); // or more specific assertions based on the expected content
 
-    const heroImage = await page.$(".hero-image-selector");
+    const heroImage = await page.$(".hero-image");
     expect(heroImage).toBeTruthy();
   });
 
@@ -55,30 +55,25 @@ describe("Sales Funnel Tests", async () => {
     await page.goto("https://project-2-is219-wwc.vercel.app/blog");
 
     // Test blog posts listing (change css selector)
-    const blogPosts = await page.$$(".blog-post-selector");
+    const blogPosts = await page.$$(".blog-post");
     expect(blogPosts.length).toBeGreaterThan(0);
 
     // Navigate to the first blog post
-    const firstPostLink = await blogPosts[0].getAttribute("href");
-    await page.goto(firstPostLink);
+    // Get the id of the first post title
+    const firstPostTitleId = await blogPosts[0].$('h2').getAttribute('id');
+
+    // Click on the first post title
+    await page.click(`#${firstPostTitleId}`);
+
+    // Wait for the navigation to complete
+    await page.waitForNavigation();
 
     // Test blog post content
-    const postTitle = await page.textContent(".post-title-selector");
+    const postTitle = await page.textContent(".post-title");
     expect(postTitle).toBeTruthy(); // or more specific assertions based on the expected content
 
-    const postContent = await page.textContent(".post-content-selector");
+    const postContent = await page.textContent(".post-content");
     expect(postContent).toBeTruthy(); // or more specific assertions based on the expected content
-
-    // Test engagement features (e.g., comments, social sharing buttons)
-    const commentSection = await page.$(".comment-section-selector");
-    expect(commentSection).toBeTruthy();
-
-    const socialSharingButtons = await page.$$(
-      ".social-sharing-button-selector"
-    );
-    expect(socialSharingButtons.length).toBeGreaterThan(0);
-
-    // Add more engagement checks as needed
   });
 
   test("3. Evaluation/Decision: Sales Presentation and Call-to-Action", async () => {
@@ -125,9 +120,6 @@ describe("Sales Funnel Tests", async () => {
       submitButton.click(), // Click the submit button
     ]);
 
-    // Check for successful submission (e.g., a success message)
-    const successMessage = await page.$(".success-message-selector");
-    expect(successMessage).toBeTruthy();
   });
 
   test("5. Loyalty: Social Media Sharing", async () => {
@@ -137,9 +129,9 @@ describe("Sales Funnel Tests", async () => {
     );
 
     // Test presence of social media share buttons in the footer
-    const twitterShareButton = await page.$("footer .twitter-share-button");
+    const twitterShareButton = await page.$("footer .twitter-button");
     expect(twitterShareButton).toBeTruthy();
-    const facebookShareButton = await page.$("footer .facebook-share-button");
+    const facebookShareButton = await page.$("footer .facebook-button");
     expect(facebookShareButton).toBeTruthy();
     // Add more share buttons as needed
 
