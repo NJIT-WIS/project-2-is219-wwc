@@ -124,12 +124,12 @@ describe('Sales Funnel Tests', async () => {
 
   test('5. Loyalty: Social Media Sharing', async () => {
     // Navigate to the page containing the footer with social media sharing buttons
-    await page.goto('https://njit-wis.github.io/project-2-is219-wwc/');
+    await page.goto('https://njit-wis.github.io/project-2-is219-wwc/post/embracing-agile-lean-transforming-education-mywebclass');
   
     // Test presence of social media share buttons in the footer
-    const twitterShareButton = await page.$('footer .twitter-share-button-selector');
+    const twitterShareButton = await page.$('footer .twitter-share-button');
     expect(twitterShareButton).toBeTruthy();
-    const facebookShareButton = await page.$('footer .facebook-share-button-selector');
+    const facebookShareButton = await page.$('footer .facebook-share-button');
     expect(facebookShareButton).toBeTruthy();
     // Add more share buttons as needed
   

@@ -86,7 +86,7 @@ function Post({ post }) {
             <div>
               {/* Facebook Share Button */}
               <button
-                className="bg-blue-500 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded"
+                className="bg-blue-500 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded facebook-share-button"
                 onClick={() => {
                   const postUrl = encodeURIComponent(
                     `${baseUrl}/post/${post.slug}`
@@ -106,7 +106,7 @@ function Post({ post }) {
               </button>
               {/* Twitter Share Button */}
               <button
-                className="bg-blue-400 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded"
+                className="bg-blue-400 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded twitter-share-button"
                 onClick={() => {
                   const postUrl = encodeURIComponent(
                     `${baseUrl}/post/${post.slug}`
