@@ -8,6 +8,7 @@
     "test-artillery": "artillery run artillery.yml"
   },
   "dependencies": {
+    "@formatjs/icu-messageformat-parser": "^2.4.0",
     "@portabletext/react": "^3.0.0",
     "@sanity/image-url": "^1.0.2",
     "@sanity/vision": "^3.9.0",
