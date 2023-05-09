@@ -26,7 +26,7 @@ export default function Home({ allPostsData }) {
   const actions = (
     <>
       <button
-        className="bg-gray-500 text-white px-4 py-2 rounded mr-2"
+        className="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded mr-2"
         onClick={() => {
           closeModal();
           Cookies.remove("cookieConsent");
@@ -35,7 +35,7 @@ export default function Home({ allPostsData }) {
         I Decline
       </button>
       <button
-        className="bg-blue-500 text-white px-4 py-2 rounded"
+        className="bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded"
         onClick={() => {
           closeModal();
           Cookies.set("cookieConsent", "true", { expires: 365 });
@@ -49,11 +49,10 @@ export default function Home({ allPostsData }) {
   const modalContent = (
     <div>
       <p className="mb-4">
-        We use cookies to ensure that we give you the best experience on our
-        website. If you continue to use this site, we will assume that you are
-        happy with it.
+        Please read our Privacy Policy carefully before using our website. Do
+        you agree to our Privacy Policy?
       </p>
-      <a href="privacy-policy/" className="text-blue-500 font-bold">
+      <a href="privacy-policy/" className="text-sky-500 font-bold">
         Read More
       </a>
     </div>
@@ -64,6 +63,13 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
+      <MetaTags
+        title="MyWebClass | Innovate Education"
+        description="MyWebClass empowers you to transform your vision into reality using Agile and Lean methodologies, revolutionizing the way you teach and learn. Join us on this journey to explore groundbreaking strategies that unleash your creativity, ignite your passion, and inspire others to do the same."
+        imageURL="https://github.com/NJIT-WIS/project-2-is219-wwc/images/hero_image.png"
+        imageAlt="hero_image"
+        url="https://github.com/NJIT-WIS/project-2-is219-wwc/images/hero_image.png"
+      />
       <Hero
         title="Innovate and Transform Education"
         description="Unleash the potential of Agile and Lean methodologies in your classroom. Join MyWebClass to explore groundbreaking 
