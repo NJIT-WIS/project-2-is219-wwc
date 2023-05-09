@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import Head from 'next/head';
 import Reviews from "../components/Reviews";
-
+import CallToAction from '../components/cta';
 
 export default function NewsLetterSignUpForm() {
   const inputRef = useRef(null);
@@ -60,19 +60,30 @@ export default function NewsLetterSignUpForm() {
                         <p class="leading-relaxed">Access exclusive resources and tools to help integrate AI into curriculum design and teaching practices.</p>
                       </div>
                   </div>
-                  
                 </div>
                 <div className="relative z-10 max-w-lg mx-auto my-auto">
                   <h4 className="font-heading text-4xl sm:text-5xl lg:text-6xl text-gray-900 font-bold mb-6">
                     Sign up for our newsletter
                     </h4>
                   <div className="sm:flex items-center" >
+                    <input
+                      className="w-full mb-3 sm:mb-0 sm:mr-4 py-3 px-4 text-sm text-gray-900 placeholder-gray-400 border border-gray-200 focus:border-purple-500 focus:outline-purple rounded-lg"
+                      type="email"
+                      placeholder="john@doe.com"
+                      ref={inputRef}
+                      required
+                      autoCapitalize="off"
+                      autoCorrect="off"
+                    />
                     <div class="relative mx-1 px-1 py-1 group mb-1 md:mb-0" id="button_admin">
-                      <div class="hover:text-orange-500 flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-black relative z-10">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.75" stroke="currentColor" class="w-7 h-7">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
-                        </svg>
-                      </div>
+                      <button class="hover:bg-orange-500 flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-black relative z-10"className="hover:bg-orange-500 relative group inline-block flex-shrink-0 w-full sm:w-auto py-3 px-5 text-sm font-semibold text-orange-50 bg-blue-300 rounded-md overflow-hidden"
+                      type="submit"
+                      onClick={subscribeUser}
+                      >
+                        <div className="relative flex items-center justify-center text-center">
+                        <span>Subscribe</span>
+                        </div>
+                      </button>
                       <div class="absolute left-0 top-0 mt-10 p-2 w-80 h-32 overflow-y-scroll bg-white z-10 hidden group-hover:block">
                         <p class="p-1 whitespace-normal text-xs md:text-sm text-gray-600">
                           By subscribing to our newsletter, you consent to receive periodic emails
@@ -84,24 +95,6 @@ export default function NewsLetterSignUpForm() {
                         </p>
                       </div>
                       </div>
-                    <input
-                      className="w-full mb-3 sm:mb-0 sm:mr-4 py-3 px-4 text-sm text-gray-900 placeholder-gray-400 border border-gray-200 focus:border-purple-500 focus:outline-purple rounded-lg"
-                      type="email"
-                      placeholder="john@doe.com"
-                      ref={inputRef}
-                      required
-                      autoCapitalize="off"
-                      autoCorrect="off"
-                    />
-                    <button
-                      className="relative group inline-block flex-shrink-0 w-full sm:w-auto py-3 px-5 text-sm font-semibold text-orange-50 bg-blue-300 rounded-md overflow-hidden"
-                      type="submit"
-                      onClick={subscribeUser}
-                    >
-                      <div className="relative flex items-center justify-center text-center">
-                        <span>Subscribe</span>
-                        </div>
-                    </button>
                   </div>
                 </div>
               </div>
