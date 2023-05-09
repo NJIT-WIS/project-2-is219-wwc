@@ -1,0 +1,25 @@
+config:
+  target: 'https://project-2-is219-wwc.vercel.app/'
+  phases:
+    - duration: 60
+      arrivalRate: 5
+scenarios:
+  - name: 'Sales Funnel Simulation'
+    flow:
+      - get:
+          url: '/'
+          # Test homepage, metadata, hero text, visuals, etc.
+      - get:
+          url: '/blog'
+          # Test blog posts
+      - get:
+          url: '/about'
+          # Test sales presentation and call-to-action
+      - post:
+          url: '/api/SubscribeUser' # Update this URL based on where your MailChimp form submission API is located
+          headers:
+            Content-Type: 'application/json'
+          json:
+            email: '{{ $randomEmail() }}'
+
+         

@@ -22,9 +22,9 @@ export default function Layout({ children}) {
       <MetaTags
         title="MyWebClass - Pioneering the Future of Education"
         description="MyWebClass is a foundation committed to revolutionizing education by incorporating Agile and Lean principles into the classroom."
-        imageURL="https://example.com/path-to-your-image.jpg"
+        imageURL="/images/image1.png"
         imageAlt="A description of the image"
-        url="https://example.com"
+        url="https://njit-wis.github.io/project-2-is219-wwc/"
       />
       <Header />
       <div className={styles.container}>
