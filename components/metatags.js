@@ -1,5 +1,5 @@
 // components/MetaTags.js
-import Head from 'next/head';
+import Head from "next/head";
 
 const MetaTags = ({ title, description, imageURL, imageAlt, url }) => {
   return (

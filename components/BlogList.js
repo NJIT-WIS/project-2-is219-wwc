@@ -3,52 +3,47 @@ import Image from "next/image";
 import ClientSideRoute from "./ClientSideRoute";
 function BlogList({ posts }) {
   return (
-    <div>
-      <hr className="border-[#2563eb] mb-10" />
-      <div className="grid grid-cols-1 md:grid-cols-2 px-10 gap-10 gap-y-16 pd-24">
-        {/* Posts */}
-        {posts.map((post) => (
-          <ClientSideRoute key={post._id} route={`/post/${post.slug.current}`}>
-            <div className="flex-flex-col group cursor-pointer">
-              <div className="relative w-full h-80 drop-shasow-xl group-hover:scale-105 transition-transform duration-200 ease-out">
-                <Image
-                  className="object-cover object-left lg:object-center"
-                  src={urlFor(post.mainImage).url()}
-                  alt={post.author ? post.author.name : "Unknown"}
-                  fill
-                />
-                <div className="absolute bottom-0 w-full bg-opacity-20 bg-black backdrop-blur-lg rounded drop-shadow-lg text-stone-50 p-5 flex justify-between">
-                  <div>
-                    <p className="font-bold">{post.title}</p>
-                    <p>
-                      {new Date(post._createdAt).toLocaleDateString("en-US", {
-                        day: "numeric",
-                        month: "long",
-                        year: "numeric",
-                      })}
-                    </p>
-                  </div>
-                  <div className="flex flex-col md:flex-row gap-y-2 md:gap-x-2 items-center">
-                    {post.categories.map((category) => (
-                      <div className="bg-white text-center text-black px-3 py-1 rounded-full text-sm font-semibold">
-                        <p>{category.title}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+    <section className="text-gray-600 body-font overflow-hidden">
+      <div className="container px-5 py-24 mx-auto">
+        <div className="-my-8 divide-y-2 divide-gray-100">
+          {posts.map((post) => (
+            <div key={post._id} className="py-8 flex flex-wrap md:flex-nowrap">
+              <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+                <span className="font-semibold title-font text-gray-700">
+                  {post.categories.map((category) => category.title).join(", ")}
+                </span>
+                <span className="mt-1 text-gray-500 text-sm">
+                  {new Date(post.publishedAt).toLocaleDateString()}
+                </span>
               </div>
-              <div className="met-5 flex-1">
-                <p className="underline text-lg font-bold">{post.title}</p>
-                <p className="line-clamp-2 text-gray-500">{post.description}</p>
+              <div className="md:flex-grow">
+                <h2 className="text-2xl font-medium text-gray-900 title-font mb-2">
+                  {post.title}
+                </h2>
+                <p className="leading-relaxed">{post.description}</p>
+                <ClientSideRoute route={`/post/${post.slug.current}`}>
+                  <a className="text-indigo-500 inline-flex items-center mt-4">
+                    Read More
+                    <svg
+                      className="w-4 h-4 ml-2"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      fill="none"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M5 12h14"></path>
+                      <path d="M12 5l7 7-7 7"></path>
+                    </svg>
+                  </a>
+                </ClientSideRoute>
               </div>
-              <p className="mt-5 font-bold flex items-center group-hover:underline">
-                Read Post
-              </p>
             </div>
-          </ClientSideRoute>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 
