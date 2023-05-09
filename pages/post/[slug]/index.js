@@ -6,7 +6,6 @@ import { PortableText } from "@portabletext/react";
 import { RichTextComponents } from "../../../components/RichTextComponents";
 import MetaTags from "../../../components/metatags";
 
-export const revalidate = 60; // revalidating the page every 60 seconds
 
 export async function generateStaticParams() {
   const query = groq`
@@ -47,7 +46,7 @@ function Post({ post }) {
       <main className="mt-10">
         <div className="mb-4 md:mb-0 w-full mx-auto relative">
           <div className="px-4 lg:px-0">
-            <h2 className="text-4xl font-semibold text-gray-800 leading-tight">
+            <h2 className="text-4xl font-semibold text-gray-800 leading-tight post-title">
               {post.title}
             </h2>
             {post.categories.map((category) => (
@@ -131,7 +130,7 @@ function Post({ post }) {
         </div>
 
         <div className="flex flex-col lg:flex-row lg:space-x-12">
-          <div className="px-4 lg:px-0 mt-12 text-gray-700 text-lg leading-relaxed w-full lg:w-3/4">
+          <div className="px-4 lg:px-0 mt-12 text-gray-700 text-lg leading-relaxed w-full lg:w-3/4 post-content">
             <PortableText value={post.body} components={RichTextComponents} />
           </div>
         </div>
@@ -156,6 +155,7 @@ export async function getStaticProps({ params: { slug } }) {
     props: {
       post,
     },
+    revalidate: 60, // revalidating the page every 60 seconds
   };
 }
 

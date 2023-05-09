@@ -1,5 +1,5 @@
 config:
-  target: 'https://mywebclass.org'
+  target: 'https://project-2-is219-wwc.vercel.app/'
   phases:
     - duration: 60
       arrivalRate: 5
@@ -16,10 +16,10 @@ scenarios:
           url: '/about'
           # Test sales presentation and call-to-action
       - post:
-          url: '/Volunteer'
+          url: '/api/SubscribeUser' # Update this URL based on where your MailChimp form submission API is located
+          headers:
+            Content-Type: 'application/json'
           json:
-            # Test MailChimp form submission
             email: '{{ $randomEmail() }}'
-      - get:
-          url: '/share'
+
          

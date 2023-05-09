@@ -4,6 +4,8 @@ import Head from "next/head";
 const MetaTags = ({ title, description, imageURL, imageAlt, url }) => {
   return (
     <Head>
+      <title>{title}</title>
+      
       {/* OpenGraph meta tags */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
